@@ -9,7 +9,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
 }
 
 h1 {
@@ -21,9 +20,8 @@ button {
   font-size: 16px;
   cursor: pointer;
 }
-
-/* Estilos do modal */
 .modal {
+  visibility: hidden; /* Inicialmente oculto */
   position: fixed;
   z-index: 1;
   left: 0;
@@ -41,9 +39,8 @@ button {
   padding: 20px;
   border-radius: 5px;
   text-align: center;
-  max-width: 80%; /* Defina uma largura máxima para o conteúdo do modal */
+  max-width: 80%;
 }
-
 /* Responsividade para o modal */
 @media screen and (max-width: 600px) {
   .modal-content {
