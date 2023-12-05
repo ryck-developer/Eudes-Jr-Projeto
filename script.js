@@ -3,29 +3,25 @@ document.addEventListener('DOMContentLoaded', function () {
   const closeModalBtn = document.getElementsByClassName('close')[0];
   const confirmBtn = document.getElementById('confirmBtn');
 
-  // Função para exibir o modal após 1 minuto
   function displayModal() {
-    modal.style.display = 'block';
+    modal.style.visibility = 'visible'; // Altera a visibilidade para tornar o modal visível
   }
 
-  // Fechar o modal ao clicar no "X" ou fora do modal
   closeModalBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
+    modal.style.visibility = 'hidden'; // Esconde o modal ao clicar no botão de fechar
   });
 
   window.addEventListener('click', (event) => {
     if (event.target === modal) {
-      modal.style.display = 'none';
+      modal.style.visibility = 'hidden'; // Esconde o modal ao clicar fora dele
     }
   });
 
-  // Ação ao confirmar otimização
   confirmBtn.addEventListener('click', () => {
-    alert('Você deu o primeiro passo para o seu sucesso!');
-    modal.style.display = 'none';
+    alert('Sua Landing Page será otimizada pelo valor de R$3500!');
+    modal.style.visibility = 'hidden'; // Esconde o modal ao confirmar
     // Adicione aqui o código para processar o pagamento ou ação desejada
   });
 
-  // Exibir o modal após 1 minuto (60 segundos * 1000 milissegundos)
-  setTimeout(displayModal, 60000);
+  setTimeout(displayModal, 60000); // Exibe o modal após 1 minuto
 });
